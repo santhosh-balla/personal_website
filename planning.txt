@@ -1,1 +1,8 @@
-git blah 
+this is my personal website 
+
+i want to use html css and js to build a really good looking website that will host all my hobbies
+and general updates
+
+i will also host all my projects here and talk about them. 
+
+
