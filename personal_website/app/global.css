@@ -1,0 +1,19 @@
+.navbar-containter{
+
+    display: flex;
+    flex-direction: space-between; 
+}
+
+.social-img{
+    width: 100;
+    height: 100;
+    object-fit: contain;
+}
+
+
+* {
+    font-family: 'Helvetica';
+    color: rgb(93, 93, 95)
+}
+
+
