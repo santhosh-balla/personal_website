@@ -1,7 +1,10 @@
-.navbar-containter{
+.navbar-container{
 
     display: flex;
-    flex-direction: space-between; 
+    /* flex-direction: row;  */
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0, 80, 53);
 }
 
 .social-img{
@@ -11,9 +14,11 @@
 }
 
 
-* {
+*{
     font-family: 'Helvetica';
-    color: rgb(93, 93, 95)
+    color: rgb(93, 93, 93);
 }
+
+
 
 
