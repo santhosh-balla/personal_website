@@ -78,83 +78,83 @@ export default function ProductPage(){
 }
 */
 
-import { getImageUrl } from './utils.js';
+// import { getImageUrl } from './utils.js';
 
 
-function ScientistProfile({size, name, profession, awards, discovered, imageId }){
+// function ScientistProfile({size, name, profession, awards, discovered, imageId }){
 
-    return(
-            <>
-            <h2>{name}</h2>
-            <img
-            className="avatar"
-            src={getImageUrl(imageId)}
-            alt={name}
-            width={size}
-            height={size}
-            />
-            <ul>
-            <li>
-                <b>Profession: </b> 
-                {profession}
-            </li>
-            <li>
-                <b>Awards: {awards.NumberOfAwards}</b> 
-                {"(" + awards.ListOfAwards + ")"}
-            </li>
-            <li>
-                <b>Discovered: </b>
-                {discovered}
-            </li>
-            </ul>
-            </>
-    )
-}
+//     return(
+//             <>
+//             <h2>{name}</h2>
+//             <img
+//             className="avatar"
+//             src={getImageUrl(imageId)}
+//             alt={name}
+//             width={size}
+//             height={size}
+//             />
+//             <ul>
+//             <li>
+//                 <b>Profession: </b> 
+//                 {profession}
+//             </li>
+//             <li>
+//                 <b>Awards: {awards.NumberOfAwards}</b> 
+//                 {"(" + awards.ListOfAwards + ")"}
+//             </li>
+//             <li>
+//                 <b>Discovered: </b>
+//                 {discovered}
+//             </li>
+//             </ul>
+//             </>
+//     )
+// }
 
-export default function Gallery() {
-  return (
-    <div>
-      <h1>Notable Scientists</h1>
-      <section classname = "profile">
-        <ScientistProfile
-        size = {70}
-        imageId = {"szV5sdG"}
-        name = "Maria Skłodowska-Curie"
-        awards = {{NumberOfAwards: 4, ListOfAwards: "Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal" }}
-        profession = {"physicist and chemist"}
-        discovered = {"polonium (chemical element)"}
-        />
-      </section>
-      <section className="profile">
-        <h2>Katsuko Saruhashi</h2>
-        <img
-          className="avatar"
-          src={getImageUrl('YfeOqp2')}
-          alt="Katsuko Saruhashi"
-          width={70}
-          height={70}
-        />
-        <ul>
-          <li>
-            <b>Profession: </b> 
-            geochemist
-          </li>
-          <li>
-            <b>Awards: 2 </b> 
-            (Miyake Prize for geochemistry, Tanaka Prize)
-          </li>
-          <li>
-            <b>Discovered: </b>
-            a method for measuring carbon dioxide in seawater
-          </li>
-        </ul>
-      </section>
-    </div>
-  );
-}
+// export default function Gallery() {
+//   return (
+//     <div>
+//       <h1>Notable Scientists</h1>
+//       <section classname = "profile">
+//         <ScientistProfile
+//         size = {70}
+//         imageId = {"szV5sdG"}
+//         name = "Maria Skłodowska-Curie"
+//         awards = {{NumberOfAwards: 4, ListOfAwards: "Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal" }}
+//         profession = {"physicist and chemist"}
+//         discovered = {"polonium (chemical element)"}
+//         />
+//       </section>
+//       <section className="profile">
+//         <h2>Katsuko Saruhashi</h2>
+//         <img
+//           className="avatar"
+//           src={getImageUrl('YfeOqp2')}
+//           alt="Katsuko Saruhashi"
+//           width={70}
+//           height={70}
+//         />
+//         <ul>
+//           <li>
+//             <b>Profession: </b> 
+//             geochemist
+//           </li>
+//           <li>
+//             <b>Awards: 2 </b> 
+//             (Miyake Prize for geochemistry, Tanaka Prize)
+//           </li>
+//           <li>
+//             <b>Discovered: </b>
+//             a method for measuring carbon dioxide in seawater
+//           </li>
+//         </ul>
+//       </section>
+//     </div>
+//   );
+// }
 
-export default function Helloworld(){
-    let helloworld = <p>helloworld</p>
+// export default function Helloworld(){
+//     let helloworld = <p>helloworld</p>
 
-    return ({helloworld})
-}
+//     return ({helloworld})
+// }

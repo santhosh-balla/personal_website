@@ -1,14 +1,3 @@
-/*
-
-
-
-
-
-
-
-
-*/
-
 import Link from "next/link";
 
 function NavbarButtons({
@@ -23,7 +12,7 @@ function NavbarButtons({
   return (
     <Link style ={{ color: 'white' }}href={link}>
       {name}
-    </Link>
+</Link>
   );
 }
 
