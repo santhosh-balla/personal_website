@@ -61,14 +61,16 @@ export default function Projects() {
     <>
       <h2>This is the project page</h2>
       <NavBar></NavBar>
-      <button disabled={project === 0} onClick={handlePrev}>
-        {" "}
-        Previous{" "}
-      </button>
-      <button disabled={projects.length - 1 === project} onClick={handleNext}>
-        {" "}
-        Next{" "}
-      </button>
+      <div>
+       
+        <button disabled={project === 0} onClick={handlePrev}>
+          Previous
+          </button>
+        <button disabled={projects.length - 1 === project} onClick={handleNext}>
+          Next
+        </button>
+      </div>
+
       <SingleProject {...projects[project]}></SingleProject>
     </>
   );
