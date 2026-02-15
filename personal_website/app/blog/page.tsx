@@ -3,7 +3,8 @@ import BlogsClient from "./BlogsClient";
 import type { Blog } from "./blogInterface";
 
 async function getBlogs(): Promise<Blog[]> {
-  const res = await fetch("http://localhost:8000/api/blogs", {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  const res = await fetch(`${apiUrl}/api/blogs`, {
     cache: "no-store",
   });
 
