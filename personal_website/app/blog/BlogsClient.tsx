@@ -68,13 +68,13 @@ export default function BlogsClient({ blogs }: { blogs: Blog[] }) {
             <div className={styles.modalContent}>
               <p>{selectedBlog.content}</p>
             </div>
-            {selectedBlog.image && (
+            {selectedBlog.image_url && (
               <div className={styles.imageContainer}>
                 <img
-                  src={selectedBlog.image}
+                  src={selectedBlog.image_url}
                   alt={selectedBlog.title}
                   className={styles.clickableImage}
-                  onClick={() => openImageModal(selectedBlog.image!)}
+                  onClick={() => openImageModal(selectedBlog.image_url!)}
                 />
               </div>
             )}

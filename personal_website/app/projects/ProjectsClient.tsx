@@ -104,12 +104,12 @@ export default function ProjectsClient({ projects }: { projects: Project[] }) {
                 <p>{project.description}</p>
               </div>
 
-              {project.image && (
+              {project.image_url && (
                 <div className={styles.imageContainer}>
                   <img 
-                    src={project.image} 
+                    src={project.image_url} 
                     alt={project.title}
-                    onClick={() => openImageModal(project.image!)}
+                    onClick={() => openImageModal(project.image_url!)}
                     className={styles.clickableImage}
                   />
                 </div>

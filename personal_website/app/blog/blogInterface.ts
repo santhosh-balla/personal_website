@@ -3,7 +3,7 @@ interface Blog {
   title: string;
   content: string;
   date: string;
-  image: string | null;
+  image_url: string | null;
   social_media_link: string | null;
 }
 
