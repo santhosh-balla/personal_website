@@ -1,77 +1,27 @@
-"use client";
+import ProjectsClient from "./ProjectsClient";
+import type {Project} from "./projectInterface"; 
+import PageWrapper from "../PageWrapper";
 
-import NavBar from "../navbar";
-import { projects } from "./data";
-import { useState } from "react";
 
-export function SingleProject({
-  title,
-  date,
-  img,
-  git,
-  techStack,
-  description,
-}: {
-  title: string;
-  date: Date;
-  img?: string;
-  git: string;
-  techStack: string;
-  description: string;
-}) {
-  const [showImage, setShowImage] = useState(false);
 
-  const onMouseEnter = () => {
-    setShowImage(true);
-  };
-  const onMouseLeave = () => {
-    setShowImage(false);
-  };
+async function getProjects(): Promise<Project[]> {
+  const res = await fetch("http://localhost:8000/api/projects", {
+    cache: "no-store",
+  });
 
-  return (
-    <>
-      <h3>{title}</h3>
-      <h5>{date ? date.toLocaleDateString() : "No date"}</h5>
-      <p>
-        {techStack}
-        {description}
-        {git}
-      </p>
-      <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-        <img
-          src={showImage === true ? img : undefined}
-          alt="Hover over me :)"
-          width={70}
-        ></img>
-      </div>
-    </>
-  );
+  if (!res.ok) {
+    throw new Error("Failed to fetch projects");
+  }
+
+  return res.json();
 }
 
-export default function Projects() {
-  const [project, setProject] = useState(0);
-  const handleNext = () => {
-    projects.length - 1 !== project && setProject(project + 1);
-  };
-  const handlePrev = () => {
-    project > 0 && setProject(project - 1);
-  };
-
+export default async function ProjectsPage() {
+  const projects = await getProjects();
+  
   return (
-    <>
-      <h2>This is the project page</h2>
-      <NavBar></NavBar>
-      <div>
-       
-        <button disabled={project === 0} onClick={handlePrev}>
-          Previous
-          </button>
-        <button disabled={projects.length - 1 === project} onClick={handleNext}>
-          Next
-        </button>
-      </div>
-
-      <SingleProject {...projects[project]}></SingleProject>
-    </>
+    <PageWrapper title="PROJECTS">
+      <ProjectsClient projects={projects} />
+    </PageWrapper>
   );
-}
+} 

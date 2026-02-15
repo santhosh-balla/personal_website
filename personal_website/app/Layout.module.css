@@ -1,0 +1,13 @@
+.mainContent {
+  margin-left: 250px;
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.02em;
+}
