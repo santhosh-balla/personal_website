@@ -5,14 +5,14 @@ export default function Sidebar() {
   return (
     <aside className={styles.sidebar}>
       <nav className={styles.navSection}>
-        <Link href="/blog" className={styles.navLink}>
-          Blog
+        <Link href="/aboutme" className={styles.navLink}>
+          About Me
         </Link>
         <Link href="/projects" className={styles.navLink}>
           Projects
         </Link>
-        <Link href="/aboutme" className={styles.navLink}>
-          About Me
+        <Link href="/blog" className={styles.navLink}>
+          Blog
         </Link>
       </nav>
 

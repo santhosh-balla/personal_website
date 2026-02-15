@@ -46,11 +46,11 @@ export default function AboutMeClient() {
             I'm a CS gradute student at UNC Charlotte focusing on AI and ML. 
           </p>
           <p>
-            When I'm not coding, you'll find me at the gym working on strength training
-            or reading fiction.
+            When I'm not coding, you'll find me at the 🏋️ gym working on strength training
+            or <span>&#x1F4D6;&#xFE0E;</span> reading fiction.
           </p>
           <p>
-            I believe in doing your best and showing up everyday, no matter what. 
+            I believe in doing your best and showing up every day, no matter what. 
           </p>
         </div>
       </div>
