@@ -25,6 +25,7 @@ from api import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/projects', views.ListProjects.as_view()),
+    path('api/blogs', views.ListBlogs.as_view()),
 ]
 
 # Serve media files in development
