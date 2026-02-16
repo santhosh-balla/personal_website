@@ -1,10 +1,14 @@
 # Python
-*.py[cod]
-*$py.class
-*.so
-.Python
-__pycache__/
+__pycache__
 *.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
 
 # Virtual Environment
 venv/
@@ -15,20 +19,27 @@ ENV/
 *.log
 db.sqlite3
 db.sqlite3-journal
-/media
-/staticfiles
+media/
+staticfiles/
 
-# Environment variables
+# Environment
 .env
 .env.local
-.env.render
-.env.example
+.env.*
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+!README.md
 
 # OS
 .DS_Store
