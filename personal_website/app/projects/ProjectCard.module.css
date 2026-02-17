@@ -224,3 +224,101 @@
 .closeButton:hover {
   background: #f0f0f0;
 }
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .slider {
+    min-height: auto;
+    max-width: 100%;
+  }
+
+  .cardBase {
+    position: relative;
+    max-height: none;
+    padding: 1.5rem;
+    border: 2px solid #333;
+  }
+
+  .cardActive {
+    transform: none;
+  }
+
+  .cardNext {
+    display: none;
+  }
+
+  .cardHidden {
+    display: none;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .linkButtons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .githubButton,
+  .demoButton {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .cardInfo {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .prevButton,
+  .nextButton {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 0;
+    align-self: stretch;
+  }
+
+  .imageModalContent {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .slider {
+    max-width: 600px;
+  }
+
+  .cardBase {
+    padding: 1.5rem;
+  }
+}
