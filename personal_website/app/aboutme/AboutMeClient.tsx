@@ -7,14 +7,14 @@ export default function AboutMeClient() {
   const [readingProgress, setReadingProgress] = useState(0);
   const [gymPR, setGymPR] = useState(0);
 
-  const targetReadingProgress = 25; // 65% through the book
+  const targetReadingProgress = 380; // 65% through the book
   const targetGymPR = 195; // PR weight in lbs
 
   useEffect(() => {
     // Trigger reading progress animation
     const readingTimer = setTimeout(() => {
       setReadingProgress(targetReadingProgress);
-    }, 100);
+    }, 1350);
 
     // Trigger gym PR count-up animation
     const duration = 1000; // 1 second
