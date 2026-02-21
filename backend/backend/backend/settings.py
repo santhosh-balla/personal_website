@@ -38,6 +38,23 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+
 # --- DATABASE ---
 # Point this to your external Postgres (Neon/Supabase)
 DATABASE_URL = os.environ.get('DATABASE_URL')
@@ -70,8 +87,17 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Use WhiteNoise to serve compressed static files
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 # --- PRODUCTION SSL ---
 if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
+
+ROOT_URLCONF = 'backend.urls'
+
+WSGI_APPLICATION = 'backend.wsgi.application'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
